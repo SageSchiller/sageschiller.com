@@ -7,6 +7,9 @@
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Browser form posts are navigation requests; without this the asset
+    // layer answers them with 405 before the Worker ever runs.
+    "run_worker_first": ["/api/*"]
   }
 }
