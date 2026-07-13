@@ -203,9 +203,33 @@
 
       <section class="section connect-section reveal" id="connect" aria-labelledby="connect-title">
         <div class="connect-frame">
-          <p class="eyebrow"><span></span>OPEN A CHANNEL</p>
-          <h2 id="connect-title">Let’s talk about security that holds up in the real world.</h2>
-          <a class="button button-primary" href="https://www.linkedin.com/in/sageschiller" target="_blank" rel="noreferrer">Find me on LinkedIn <span aria-hidden="true">↗</span></a>
+          <div class="connect-grid">
+            <div>
+              <p class="eyebrow"><span></span>OPEN A CHANNEL</p>
+              <h2 id="connect-title">Let’s talk about security that holds up in the real world.</h2>
+              <p class="connect-copy">Use the form, or find me where I already hang out. Messages land directly with me, and your details stay between us.</p>
+              <div class="connect-links">
+                <a class="button button-primary" href="https://www.linkedin.com/in/sageschiller" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a class="button button-quiet" href="https://discord.com/users/1180602612492542058" target="_blank" rel="noreferrer">Discord <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <form class="contact-form" action="/api/contact" method="POST">
+              <label>
+                <span class="field-label">NAME</span>
+                <input type="text" name="name" maxlength="120" autocomplete="name" />
+              </label>
+              <label>
+                <span class="field-label">REPLY TO *</span>
+                <input type="text" name="reply" maxlength="200" required placeholder="email or handle" />
+              </label>
+              <label>
+                <span class="field-label">MESSAGE *</span>
+                <textarea name="message" rows="5" minlength="10" maxlength="2000" required></textarea>
+              </label>
+              <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <button class="button button-primary" type="submit">Send message <span aria-hidden="true">→</span></button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

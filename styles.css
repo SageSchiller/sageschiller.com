@@ -262,7 +262,37 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 }
 .connect-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
 .connect-frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
-.connect-frame h2 { max-width: 780px; margin-bottom: 1.9rem; }
+.connect-frame h2 { max-width: 780px; margin-bottom: 1.2rem; font-size: clamp(1.7rem, 2.8vw, 2.5rem); }
+.connect-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: start; }
+.connect-copy { color: var(--muted); margin: 0 0 1.6rem; max-width: 30rem; }
+.connect-links { display: flex; gap: .75rem; flex-wrap: wrap; }
+.contact-form { display: grid; gap: 1rem; }
+.contact-form label { display: grid; gap: .4rem; }
+.field-label { font-family: var(--mono); font-size: .67rem; letter-spacing: .16em; font-weight: 700; color: var(--faint); }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: .7rem .8rem;
+  border: 1px solid var(--line); border-radius: .2rem;
+  background: rgba(255, 255, 255, .03); color: var(--ink);
+  font: inherit; font-size: .95rem;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--faint); }
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(76, 224, 179, .12);
+}
+.contact-form textarea { resize: vertical; min-height: 8rem; }
+.contact-form .button { justify-self: start; cursor: pointer; }
+.hp-field { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+/* ---------- standalone pages (404, sent) ---------- */
+.standalone {
+  min-height: 100svh; width: min(calc(100% - 3rem), 36rem);
+  margin: 0 auto; display: grid; place-content: center;
+  justify-items: start; gap: 1.5rem;
+  position: relative; z-index: 1;
+}
+.standalone .terminal { width: 100%; }
+.standalone .terminal-body { min-height: 0; }
 
 /* ---------- footer ---------- */
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem 0; color: var(--faint); font-size: .81rem; }
@@ -285,7 +315,7 @@ footer p { margin: 0; }
     --line: #c9d2d6; --accent: #0b7a5e; --accent-bright: #0b7a5e; --accent-dim: #0b7a5e;
   }
   body { background: #fff; }
-  body::before, .statusbar, .skip-link, .ticker, .hero-actions, .hero::after, .t-cursor { display: none; }
+  body::before, .statusbar, .skip-link, .ticker, .hero-actions, .hero::after, .t-cursor, .contact-form { display: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .terminal, .route-panel, .connect-frame { box-shadow: none; }
   .section, .hero { padding: 2.5rem 0; min-height: 0; break-inside: avoid; }
@@ -299,7 +329,7 @@ footer p { margin: 0; }
   .site-header { flex-wrap: wrap; gap: .5rem .9rem; }
   nav { gap: .75rem; font-size: .72rem; flex-wrap: wrap; }
   .hero { min-height: auto; padding: 4.2rem 0 3.6rem; }
-  .hero-grid, .split-heading, .note-section { grid-template-columns: 1fr; gap: 2.2rem; }
+  .hero-grid, .split-heading, .note-section, .connect-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .hero-side { max-width: 30rem; }
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card { min-height: 0; }

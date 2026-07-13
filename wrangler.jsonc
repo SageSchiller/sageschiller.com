@@ -1,0 +1,12 @@
+{
+  // Cloudflare Workers config. The name must match the existing Worker
+  // (sageschillercom) so deploys update it instead of creating a new one.
+  "name": "sageschillercom",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  }
+}

@@ -4,13 +4,33 @@ Personal professional site for Sage Schiller.
 
 ## Stack
 
-A deliberately simple static site:
+A deliberately simple site:
 
-- `index.html`
-- `styles.css`
-- `favicon.svg`
+- `index.html`, `styles.css`, `favicon.svg`, `headshot.jpg`
+- `404.html` and `sent.html` (styled error and confirmation pages)
+- `.well-known/security.txt` (RFC 9116)
+- `worker.js` and `wrangler.jsonc` (one Cloudflare Worker that serves the static
+  files and handles `POST /api/contact`)
 
-No framework, build step, analytics, third-party scripts, or tracking pixels.
+No framework, npm, build step, analytics, third-party scripts, or tracking pixels.
+
+## Contact form backend
+
+The form on the site POSTs to `/api/contact`. The Worker validates the
+submission (honeypot field, length limits) and forwards it to a private
+Discord channel via webhook. The visitor never sees an email address and the
+webhook URL never appears in the repo.
+
+One-time setup:
+
+1. In Discord: Server Settings > Integrations > Webhooks > New Webhook.
+   Point it at a private channel and copy the webhook URL.
+2. In Cloudflare: Workers & Pages > sageschillercom > Settings >
+   Variables and Secrets > Add > type "Secret", name `DISCORD_WEBHOOK_URL`,
+   paste the URL, deploy.
+
+Until the secret is set, the endpoint returns a friendly 503 pointing people
+at LinkedIn.
 
 ## Local preview
 

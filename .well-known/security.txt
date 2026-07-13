@@ -1,0 +1,6 @@
+# security.txt for sageschiller.com (RFC 9116)
+Contact: https://sageschiller.com/#connect
+Contact: https://www.linkedin.com/in/sageschiller
+Expires: 2027-07-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://sageschiller.com/.well-known/security.txt
