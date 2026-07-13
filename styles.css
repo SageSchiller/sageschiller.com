@@ -127,6 +127,19 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 .button-quiet { color: var(--ink); background: rgba(255, 255, 255, .025); }
 .button-quiet:hover { border-color: var(--accent-dim); }
 
+/* ---------- portrait + terminal stack ---------- */
+.hero-side { display: grid; gap: 1.1rem; align-self: center; }
+.portrait {
+  margin: 0; border: 1px solid var(--line); border-radius: .45rem; overflow: hidden;
+  background: var(--panel);
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, .45), 0 0 0 1px rgba(76, 224, 179, .05);
+}
+.portrait img {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 1 / .82; object-fit: cover; object-position: 50% 22%;
+  filter: saturate(.94);
+}
+
 /* ---------- terminal card ---------- */
 .terminal {
   border: 1px solid var(--line); border-radius: .45rem; overflow: hidden;
@@ -287,7 +300,7 @@ footer p { margin: 0; }
   nav { gap: .75rem; font-size: .72rem; flex-wrap: wrap; }
   .hero { min-height: auto; padding: 4.2rem 0 3.6rem; }
   .hero-grid, .split-heading, .note-section { grid-template-columns: 1fr; gap: 2.2rem; }
-  .terminal { max-width: 30rem; }
+  .hero-side { max-width: 30rem; }
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card { min-height: 0; }
   .route-panel { padding: 1.2rem 1.1rem; }
