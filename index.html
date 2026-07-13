@@ -3,85 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sage Schiller is a cybersecurity professional focused on IT/OT security, vulnerability management, and practical security operations." />
-    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="Sage Schiller is a cybersecurity professional focused on IT/OT security, vulnerability management, and practical security operations for critical infrastructure." />
+    <meta name="theme-color" content="#060809" />
     <meta property="og:title" content="Sage Schiller | Cybersecurity" />
-    <meta property="og:description" content="IT/OT security, vulnerability management, and practical security operations." />
+    <meta property="og:description" content="IT/OT security for the systems that keep the lights on." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sageschiller.com/" />
     <title>Sage Schiller | Cybersecurity</title>
+    <link rel="canonical" href="https://sageschiller.com/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sage Schiller",
+      "jobTitle": "Senior Information Assurance Analyst",
+      "url": "https://sageschiller.com/",
+      "sameAs": ["https://www.linkedin.com/in/sageschiller"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Honolulu", "addressRegion": "HI", "addressCountry": "US" },
+      "knowsAbout": ["IT/OT security", "Vulnerability management", "Incident response", "Threat hunting", "OSINT", "Risk and compliance"]
+    }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <div class="statusbar" aria-hidden="true">
+      <p><span class="pulse"></span>STATUS: OPERATIONAL</p>
+      <p class="statusbar-right"><span id="hst-clock">--:--:--</span> HST&ensp;·&ensp;21.3069°N 157.8583°W</p>
+    </div>
+
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="Sage Schiller home">
         <span class="mark">SS</span>
-        <span>Sage Schiller</span>
+        <span>sage<b>.</b>schiller</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#focus">Focus</a>
-        <a href="#experience">Experience</a>
-        <a href="#connect">Connect</a>
+        <a href="#focus">/focus</a>
+        <a href="#route">/route</a>
+        <a href="#experience">/experience</a>
+        <a href="#connect">/connect</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="eyebrow"><span></span> SECURITY PROFESSIONAL · HONOLULU, HAWAIʻI</div>
         <div class="hero-grid">
           <div>
-            <p class="kicker">Protect the systems people depend on.</p>
-            <h1 id="hero-title">Security work that stays practical.</h1>
+            <p class="eyebrow"><span></span>SECURITY PROFESSIONAL — HONOLULU, HAWAIʻI</p>
+            <h1 id="hero-title" class="glitch" data-text="Securing the systems that keep the lights on.">Securing the systems that keep the lights on.</h1>
             <p class="hero-copy">
-              I work at the intersection of IT and operational technology security, helping turn risk,
-              vulnerability data, and emerging threats into clear action.
+              I work the seam between IT and operational technology — turning vulnerability
+              noise, risk, and live threats into decisions people can actually act on.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="https://www.linkedin.com/in/sageschiller" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
-              <a class="button button-quiet" href="#focus">What I focus on <span aria-hidden="true">↓</span></a>
+              <a class="button button-quiet" href="#focus">See the work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <aside class="signal-card" aria-label="Professional snapshot">
-            <p class="card-label">CURRENT ROLE</p>
-            <p class="role">Senior Information Assurance Analyst</p>
-            <p class="muted">Energy sector · IT/OT security</p>
-            <div class="signal-line"></div>
-            <p class="card-label">OPERATING PRINCIPLE</p>
-            <p class="principle">“You cannot protect what you do not understand.”</p>
+
+          <aside class="terminal" aria-label="Professional snapshot">
+            <div class="terminal-bar" aria-hidden="true">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="terminal-title">sage@hnl:~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <p class="t-cmd">whoami</p>
+              <p class="t-out">sage.schiller — senior information assurance analyst</p>
+              <p class="t-cmd">grep -i focus profile.txt</p>
+              <p class="t-out">it/ot security · vulnerability management · incident response</p>
+              <p class="t-cmd">uptime</p>
+              <p class="t-out">15+ years across IT &amp; cybersecurity — still patching</p>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section class="section focus-section" id="focus" aria-labelledby="focus-title">
+      <div class="ticker" role="marquee" aria-label="Credentials and skills: CISSP, OSIR, CISA, CISM, AWS, PSM 1, CAPM, BTL1, Dragos, OSINT, Splunk, Security+, Network+, A+, Linux, MCSA, CCENT, vulnerability management, IT/OT security, threat hunting, incident response, DFIR, active defense, SOC analysis, Azure, Python, risk and compliance, critical infrastructure, 15+ years IT and security">
+      <div class="ticker-track" aria-hidden="true">
+        <span>CISSP</span><span>·</span><span>OSIR</span><span>·</span><span>CISA</span><span>·</span><span>CISM</span><span>·</span><span>AWS</span><span>·</span><span>PSM 1</span><span>·</span><span>CAPM</span><span>·</span><span>BTL1</span><span>·</span><span>DRAGOS</span><span>·</span><span>OSINT</span><span>·</span><span>SPLUNK</span><span>·</span><span>SECURITY+</span><span>·</span><span>NETWORK+</span><span>·</span><span>A+</span><span>·</span><span>LINUX</span><span>·</span><span>MCSA</span><span>·</span><span>CCENT</span><span>·</span><span>VULNERABILITY MANAGEMENT</span><span>·</span><span>IT/OT SECURITY</span><span>·</span><span>THREAT HUNTING</span><span>·</span><span>INCIDENT RESPONSE</span><span>·</span><span>DFIR</span><span>·</span><span>ACTIVE DEFENSE</span><span>·</span><span>SOC ANALYSIS</span><span>·</span><span>AZURE</span><span>·</span><span>PYTHON</span><span>·</span><span>RISK &amp; COMPLIANCE</span><span>·</span><span>CRITICAL INFRASTRUCTURE</span><span>·</span><span>15+ YEARS</span><span>·</span>
+        <span>CISSP</span><span>·</span><span>OSIR</span><span>·</span><span>CISA</span><span>·</span><span>CISM</span><span>·</span><span>AWS</span><span>·</span><span>PSM 1</span><span>·</span><span>CAPM</span><span>·</span><span>BTL1</span><span>·</span><span>DRAGOS</span><span>·</span><span>OSINT</span><span>·</span><span>SPLUNK</span><span>·</span><span>SECURITY+</span><span>·</span><span>NETWORK+</span><span>·</span><span>A+</span><span>·</span><span>LINUX</span><span>·</span><span>MCSA</span><span>·</span><span>CCENT</span><span>·</span><span>VULNERABILITY MANAGEMENT</span><span>·</span><span>IT/OT SECURITY</span><span>·</span><span>THREAT HUNTING</span><span>·</span><span>INCIDENT RESPONSE</span><span>·</span><span>DFIR</span><span>·</span><span>ACTIVE DEFENSE</span><span>·</span><span>SOC ANALYSIS</span><span>·</span><span>AZURE</span><span>·</span><span>PYTHON</span><span>·</span><span>RISK &amp; COMPLIANCE</span><span>·</span><span>CRITICAL INFRASTRUCTURE</span><span>·</span><span>15+ YEARS</span><span>·</span>
+        </div>
+      </div>
+      <section class="section focus-section reveal" id="focus" aria-labelledby="focus-title">
         <div class="section-heading">
-          <p class="eyebrow"><span></span> FOCUS AREAS</p>
-          <h2 id="focus-title">Build visibility. Reduce friction. Improve resilience.</h2>
+          <p class="eyebrow"><span></span>FOCUS AREAS</p>
+          <h2 id="focus-title">Reduce the attack surface. Keep the operation running.</h2>
         </div>
         <div class="focus-grid">
           <article class="focus-card">
-            <p class="number">01</p>
+            <p class="number">0x01</p>
             <h3>Vulnerability management</h3>
             <p>Turning a noisy backlog into prioritized, accountable remediation work that actually moves.</p>
           </article>
           <article class="focus-card">
-            <p class="number">02</p>
+            <p class="number">0x02</p>
             <h3>IT / OT security</h3>
-            <p>Helping protect the connective tissue between enterprise systems and operational environments.</p>
+            <p>Protecting the connective tissue between enterprise systems and the operational environments they touch.</p>
           </article>
           <article class="focus-card">
-            <p class="number">03</p>
-            <h3>Threat response</h3>
-            <p>Coordinating clear, proportionate action when new vulnerabilities and threats start moving fast.</p>
+            <p class="number">0x03</p>
+            <h3>Incident response</h3>
+            <p>When something gets through: containment, investigation, and recovery on a clear timeline — with lessons that stick.</p>
+          </article>
+          <article class="focus-card">
+            <p class="number">0x04</p>
+            <h3>Threat hunting</h3>
+            <p>Assuming compromise and going looking for what the alerts miss, instead of waiting for the phone to ring.</p>
+          </article>
+          <article class="focus-card">
+            <p class="number">0x05</p>
+            <h3>OSINT &amp; exposure</h3>
+            <p>Seeing the organization the way an attacker does — mapping what’s visible from the outside before someone else uses it.</p>
+          </article>
+          <article class="focus-card">
+            <p class="number">0x06</p>
+            <h3>Risk &amp; compliance</h3>
+            <p>Meeting the regulatory bar without losing the plot — controls that satisfy the framework and actually reduce risk.</p>
           </article>
         </div>
       </section>
 
-      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <section class="section route-section reveal" id="route" aria-labelledby="route-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span></span>THE ROUTE HERE</p>
+          <h2 id="route-title">Fifteen years, three hops.</h2>
+        </div>
+        <div class="route-panel">
+          <p class="route-cmd" aria-hidden="true"><span class="prompt">$</span> traceroute career</p>
+          <ol class="route-hops">
+            <li>
+              <span class="hop-num">1</span>
+              <span class="hop-host">san-antonio.tx</span>
+              <span class="hop-desc">enterprise IT foundations</span>
+            </li>
+            <li>
+              <span class="hop-num">2</span>
+              <span class="hop-host">omaha.ne</span>
+              <span class="hop-desc">systems, networks &amp; security operations</span>
+            </li>
+            <li class="hop-current">
+              <span class="hop-num">3</span>
+              <span class="hop-host">honolulu.hi</span>
+              <span class="hop-desc">IT/OT security · critical infrastructure <em>[current node]</em></span>
+            </li>
+          </ol>
+          <p class="route-done" aria-hidden="true">route complete — 3 hops, zero packets dropped.</p>
+        </div>
+      </section>
+
+      <section class="section experience-section reveal" id="experience" aria-labelledby="experience-title">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow"><span></span> EXPERIENCE</p>
+            <p class="eyebrow"><span></span>EXPERIENCE</p>
             <h2 id="experience-title">Security is a systems problem.</h2>
           </div>
           <p class="section-copy">More than fifteen years across IT and cybersecurity, with a bias toward useful controls, plain language, and work that survives contact with real operations.</p>
@@ -90,7 +166,7 @@
         <div class="experience-panel">
           <div class="experience-row">
             <p class="experience-label">PRACTICE</p>
-            <p>Information assurance · vulnerability management · risk and compliance · security operations</p>
+            <p>Information assurance · vulnerability management · incident response · risk &amp; compliance · security operations</p>
           </div>
           <div class="experience-row">
             <p class="experience-label">ENVIRONMENTS</p>
@@ -98,34 +174,100 @@
           </div>
           <div class="experience-row">
             <p class="experience-label">CREDENTIALS</p>
-            <p>CISSP · CISA · CISM · CAPM</p>
+            <p>CISSP · CISA · CISM · OSIR · PSM I · CAPM</p>
           </div>
         </div>
       </section>
 
-      <section class="section note-section" aria-labelledby="note-title">
-        <div class="note-mark" aria-hidden="true">/</div>
+      <section class="section note-section reveal" aria-labelledby="note-title">
+        <div class="note-mark" aria-hidden="true">&gt;_</div>
         <div>
-          <p class="eyebrow"><span></span> HOW I WORK</p>
-          <h2 id="note-title">The goal is not a prettier risk register.</h2>
-          <p class="note-copy">The goal is better decisions, fewer blind spots, and security work people can carry forward when the meeting ends.</p>
+          <p class="eyebrow"><span></span>OPERATING PRINCIPLE</p>
+          <h2 id="note-title">“You cannot protect what you do not understand.”</h2>
+          <p class="note-copy">The goal is not a prettier risk register. It’s better decisions, fewer blind spots, and security work people can carry forward when the meeting ends.</p>
         </div>
       </section>
 
-      <section class="connect-section" id="connect" aria-labelledby="connect-title">
-        <p class="eyebrow"><span></span> CONNECT</p>
-        <h2 id="connect-title">Let’s talk about security that holds up in the real world.</h2>
-        <a class="button button-primary" href="https://www.linkedin.com/in/sageschiller" target="_blank" rel="noreferrer">Find me on LinkedIn <span aria-hidden="true">↗</span></a>
+      <section class="section connect-section reveal" id="connect" aria-labelledby="connect-title">
+        <div class="connect-frame">
+          <p class="eyebrow"><span></span>OPEN A CHANNEL</p>
+          <h2 id="connect-title">Let’s talk about security that holds up in the real world.</h2>
+          <a class="button button-primary" href="https://www.linkedin.com/in/sageschiller" target="_blank" rel="noreferrer">Find me on LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Sage Schiller</p>
-      <p>Built for clarity, not noise.</p>
+      <p>© <span id="year">2026</span> Sage Schiller</p>
+      <p class="footer-mono">no trackers · no analytics · no noise</p>
+      <p class="footer-mono">HNL · UTC−10</p>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Live Honolulu clock in the status bar.
+      var clockEl = document.getElementById('hst-clock');
+      function tick() {
+        clockEl.textContent = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Pacific/Honolulu', hour12: false,
+          hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }).format(new Date());
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Terminal typing effect. The real content lives in the HTML (works
+      // without JS); with JS we clear it and retype it line by line.
+      (function () {
+        var body = document.getElementById('terminal-body');
+        if (reduceMotion) { body.classList.add('t-done'); return; }
+        var lines = Array.prototype.map.call(body.children, function (el) {
+          return { text: el.textContent, cmd: el.classList.contains('t-cmd') };
+        });
+        body.textContent = '';
+        var cursor = document.createElement('span');
+        cursor.className = 't-cursor';
+        body.appendChild(cursor);
+
+        var li = 0;
+        function nextLine() {
+          if (li >= lines.length) { body.classList.add('t-done'); return; }
+          var line = lines[li++];
+          var p = document.createElement('p');
+          p.className = line.cmd ? 't-cmd' : 't-out';
+          body.insertBefore(p, cursor);
+          if (line.cmd) {
+            var ci = 0;
+            (function typeChar() {
+              p.textContent = line.text.slice(0, ++ci);
+              if (ci < line.text.length) setTimeout(typeChar, 24 + Math.random() * 40);
+              else setTimeout(nextLine, 260);
+            })();
+          } else {
+            p.textContent = line.text;
+            setTimeout(nextLine, 420);
+          }
+        }
+        setTimeout(nextLine, 600);
+      })();
+
+      // Reveal sections as they enter the viewport.
+      (function () {
+        var sections = document.querySelectorAll('.reveal');
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+          sections.forEach(function (s) { s.classList.add('in'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        sections.forEach(function (s) { io.observe(s); });
+      })();
     </script>
   </body>
 </html>
