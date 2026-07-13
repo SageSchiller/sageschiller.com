@@ -35,15 +35,15 @@ Then visit `http://localhost:8080`.
 
 ## DNS safety checklist
 
-Before changing nameservers, copy every existing record from Namecheap into Cloudflare DNS. In particular, preserve any Google Workspace records:
+DNS is hosted on Cloudflare (nameservers moved from Namecheap, July 2026). Email runs on Proton Mail — when editing DNS, always preserve:
 
-- MX records
-- SPF TXT record
-- DKIM TXT/CNAME record
+- MX records (`mail.protonmail.ch`, `mailsec.protonmail.ch`)
+- SPF TXT record (`v=spf1 include:_spf.protonmail.ch ~all`)
+- DKIM CNAME records (`protonmail._domainkey`, `protonmail2._domainkey`, `protonmail3._domainkey` — set to "DNS only", not proxied)
 - DMARC TXT record
-- domain verification records
+- `protonmail-verification` TXT record
 
-Do not delete the old Namecheap DNS records until mail flow and the website both verify after propagation.
+If Proton's domain settings show DKIM as unverified, copy the three DKIM CNAME values from Proton into Cloudflare DNS.
 
 ## Content notes
 
