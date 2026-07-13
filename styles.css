@@ -100,7 +100,7 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 .hero-copy { max-width: 620px; color: var(--muted); font-size: 1.08rem; }
 .hero-actions { display: flex; gap: .75rem; margin-top: 2rem; flex-wrap: wrap; }
 
-/* Subtle glitch on hover — two clipped copies of the headline, briefly offset. */
+/* Subtle glitch on hover: two clipped copies of the headline, briefly offset. */
 .glitch { position: relative; }
 .glitch::before, .glitch::after {
   content: attr(data-text);

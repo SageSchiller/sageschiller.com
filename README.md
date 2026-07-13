@@ -35,11 +35,11 @@ Then visit `http://localhost:8080`.
 
 ## DNS safety checklist
 
-DNS is hosted on Cloudflare (nameservers moved from Namecheap, July 2026). Email runs on Proton Mail — when editing DNS, always preserve:
+DNS is hosted on Cloudflare (nameservers moved from Namecheap, July 2026). Email runs on Proton Mail, so when editing DNS, always preserve:
 
 - MX records (`mail.protonmail.ch`, `mailsec.protonmail.ch`)
 - SPF TXT record (`v=spf1 include:_spf.protonmail.ch ~all`)
-- DKIM CNAME records (`protonmail._domainkey`, `protonmail2._domainkey`, `protonmail3._domainkey` — set to "DNS only", not proxied)
+- DKIM CNAME records (`protonmail._domainkey`, `protonmail2._domainkey`, `protonmail3._domainkey`; set to "DNS only", not proxied)
 - DMARC TXT record
 - `protonmail-verification` TXT record
 
