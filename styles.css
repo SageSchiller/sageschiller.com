@@ -54,8 +54,8 @@ body::before {
    where headlines sit, lighter on the right where the scan feed lives. */
 .bg-fx::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(6, 8, 9, .5), rgba(6, 8, 9, .22) 62%);
-  -webkit-backdrop-filter: blur(1.4px); backdrop-filter: blur(1.4px);
+  background: linear-gradient(to right, rgba(6, 8, 9, .42), rgba(6, 8, 9, .16) 62%);
+  -webkit-backdrop-filter: blur(1.2px); backdrop-filter: blur(1.2px);
 }
 .scanline {
   position: absolute; left: 0; right: 0; top: -25vh; height: 22vh;
@@ -73,17 +73,17 @@ body::before {
 .scanfeed pre {
   margin: 0; padding: 1.2rem 0;
   font-family: var(--mono); font-size: .7rem; line-height: 2;
-  color: rgba(118, 200, 176, .28);
+  color: rgba(118, 200, 176, .38);
   filter: blur(1px);
 }
-.sf-hi { color: rgba(243, 191, 79, .32); }
-.sf-ok { color: rgba(76, 224, 179, .36); }
+.sf-hi { color: rgba(243, 191, 79, .44); }
+.sf-ok { color: rgba(76, 224, 179, .48); }
 @keyframes scanfeed-scroll { to { transform: translateY(-50%); } }
 
 .ghost {
   position: absolute; max-width: 0; overflow: hidden; white-space: nowrap;
   font-family: var(--mono); font-size: .78rem; letter-spacing: .05em;
-  color: rgba(118, 200, 176, .26);
+  color: rgba(118, 200, 176, .36);
   animation: ghost-type 21s linear infinite;
 }
 @keyframes ghost-type {
@@ -382,15 +382,15 @@ footer p { margin: 0; }
   /* Show the background decor statically: no motion, but not a blank page.
      RDP sessions and accessibility settings both land here. */
   .scanline { display: none; }
-  .ghost { animation: none; max-width: none; color: rgba(118, 200, 176, .28); }
+  .ghost { animation: none; max-width: none; color: rgba(118, 200, 176, .38); }
   .scanfeed-track { animation: none; }
   /* Static decor can afford to be brighter, and remote sessions crush
      faint colors, so boost contrast and ease the veil in this mode. */
-  .scanfeed pre { color: rgba(118, 200, 176, .34); filter: blur(.5px); }
-  .sf-hi { color: rgba(243, 191, 79, .38); }
-  .sf-ok { color: rgba(76, 224, 179, .42); }
+  .scanfeed pre { color: rgba(118, 200, 176, .44); filter: blur(.5px); }
+  .sf-hi { color: rgba(243, 191, 79, .5); }
+  .sf-ok { color: rgba(76, 224, 179, .54); }
   .bg-fx::after {
-    background: linear-gradient(to right, rgba(6, 8, 9, .45), rgba(6, 8, 9, .15) 62%);
+    background: linear-gradient(to right, rgba(6, 8, 9, .38), rgba(6, 8, 9, .12) 62%);
     -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px);
   }
   .pulse, .t-cursor, .ticker-track { animation: none; }
