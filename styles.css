@@ -382,8 +382,17 @@ footer p { margin: 0; }
   /* Show the background decor statically: no motion, but not a blank page.
      RDP sessions and accessibility settings both land here. */
   .scanline { display: none; }
-  .ghost { animation: none; max-width: none; }
+  .ghost { animation: none; max-width: none; color: rgba(118, 200, 176, .22); }
   .scanfeed-track { animation: none; }
+  /* Static decor can afford to be brighter, and remote sessions crush
+     faint colors, so boost contrast and ease the veil in this mode. */
+  .scanfeed pre { color: rgba(118, 200, 176, .26); filter: blur(.6px); }
+  .sf-hi { color: rgba(243, 191, 79, .3); }
+  .sf-ok { color: rgba(76, 224, 179, .32); }
+  .bg-fx::after {
+    background: linear-gradient(to right, rgba(6, 8, 9, .45), rgba(6, 8, 9, .15) 62%);
+    -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px);
+  }
   .pulse, .t-cursor, .ticker-track { animation: none; }
   .glitch:hover::before, .glitch:hover::after { animation: none; opacity: 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
@@ -410,7 +419,7 @@ footer p { margin: 0; }
   .statusbar { padding: .45rem 1rem; }
   .statusbar p.statusbar-right { display: none; }
   .site-header { flex-wrap: wrap; gap: .5rem .9rem; padding: .8rem 1rem; }
-  .g2, .g4, .g6, .scanfeed { display: none; }
+  .g2, .g4, .g6 { display: none; }
   nav { gap: .75rem; font-size: .72rem; flex-wrap: wrap; }
   .hero { min-height: auto; padding: 4.2rem 0 3.6rem; }
   .hero-grid, .split-heading, .note-section, .connect-grid { grid-template-columns: 1fr; gap: 2.2rem; }
@@ -424,4 +433,8 @@ footer p { margin: 0; }
   .note-mark { font-size: 3.2rem; }
   footer { flex-direction: column; align-items: flex-start; }
   .footer-mono { align-self: auto; }
+}
+
+@media (max-width: 540px) {
+  .scanfeed { display: none; }
 }
