@@ -379,7 +379,11 @@ footer p { margin: 0; }
 /* ---------- motion & mobile ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .bg-fx { display: none; }
+  /* Show the background decor statically: no motion, but not a blank page.
+     RDP sessions and accessibility settings both land here. */
+  .scanline { display: none; }
+  .ghost { animation: none; max-width: none; }
+  .scanfeed-track { animation: none; }
   .pulse, .t-cursor, .ticker-track { animation: none; }
   .glitch:hover::before, .glitch:hover::after { animation: none; opacity: 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
