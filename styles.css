@@ -49,6 +49,14 @@ body::before {
 
 /* ---------- background terminal fx ---------- */
 .bg-fx { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+/* Dim-and-blur veil over the fx layer: animations keep running underneath,
+   but foreground text never has to compete with them. Heavier on the left
+   where headlines sit, lighter on the right where the scan feed lives. */
+.bg-fx::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(6, 8, 9, .6), rgba(6, 8, 9, .3) 62%);
+  -webkit-backdrop-filter: blur(1.7px); backdrop-filter: blur(1.7px);
+}
 .scanline {
   position: absolute; left: 0; right: 0; top: -25vh; height: 22vh;
   background: linear-gradient(to bottom, transparent, rgba(76, 224, 179, .035), transparent);
