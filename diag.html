@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Display diagnostic | Sage Schiller</title>
+    <style>
+      body { margin: 0; padding: 2rem 1.5rem; background: #060809; color: #e8eef1;
+             font-family: ui-monospace, Menlo, Consolas, monospace; line-height: 1.7; }
+      h1 { font-size: 1.1rem; color: #4ce0b3; }
+      .report { font-size: 1rem; }
+      .report b { color: #4ce0b3; }
+      .bars { margin-top: 2rem; }
+      .bar { padding: .35rem 0; font-size: .95rem; }
+      .bar span { color: #f3bf4f; margin-right: 1rem; }
+      .mover { width: 2rem; height: 2rem; background: #4ce0b3; margin: 1rem 0;
+               animation: slide 2s ease-in-out infinite alternate; }
+      @keyframes slide { to { transform: translateX(10rem); } }
+      .note { color: #9aabb3; font-size: .85rem; max-width: 40rem; }
+    </style>
+  </head>
+  <body>
+    <h1>display diagnostic · v2026.07.16.4</h1>
+    <div class="report" id="report">javascript required for the report</div>
+
+    <div class="mover"></div>
+    <p class="note">1. If the green square above is sliding back and forth, animations run in this browser.</p>
+
+    <div class="bars">
+      <div class="bar" style="color: rgba(118,200,176,.10)"><span style="color:#f3bf4f">A</span>$ nmap -sV 10.13.37.0/24 (10% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.14)"><span style="color:#f3bf4f">B</span>$ nmap -sV 10.13.37.0/24 (14% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.18)"><span style="color:#f3bf4f">C</span>$ nmap -sV 10.13.37.0/24 (18% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.22)"><span style="color:#f3bf4f">D</span>$ nmap -sV 10.13.37.0/24 (22% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.26)"><span style="color:#f3bf4f">E</span>$ nmap -sV 10.13.37.0/24 (26% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.32)"><span style="color:#f3bf4f">F</span>$ nmap -sV 10.13.37.0/24 (32% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.40)"><span style="color:#f3bf4f">G</span>$ nmap -sV 10.13.37.0/24 (40% opacity)</div>
+      <div class="bar" style="color: rgba(118,200,176,.55)"><span style="color:#f3bf4f">H</span>$ nmap -sV 10.13.37.0/24 (55% opacity)</div>
+    </div>
+    <p class="note">2. Report the FIRST letter (A through H) whose terminal line you can actually read. The live site's background runs at roughly the A to B level; that is the calibration target.</p>
+
+    <script>
+      var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var bf = CSS.supports('backdrop-filter', 'blur(1px)') || CSS.supports('-webkit-backdrop-filter', 'blur(1px)');
+      document.getElementById('report').innerHTML =
+        'reduced motion: <b>' + (rm ? 'YES (site shows static decor)' : 'no (site animates)') + '</b><br>' +
+        'viewport: <b>' + innerWidth + ' x ' + innerHeight + '</b> (scan feed hides below 540 wide)<br>' +
+        'pixel ratio: <b>' + devicePixelRatio + '</b><br>' +
+        'backdrop-filter (glass): <b>' + (bf ? 'supported' : 'NOT supported') + '</b>';
+    </script>
+  </body>
+</html>
