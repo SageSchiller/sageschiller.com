@@ -55,6 +55,23 @@ body::before {
   animation: scan 16s linear infinite;
 }
 @keyframes scan { to { transform: translateY(160vh); } }
+/* Slow-scrolling, blurred vulnerability-scan feed behind the content. */
+.scanfeed {
+  position: absolute; top: 0; bottom: 0; right: 2.5%;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+.scanfeed-track { animation: scanfeed-scroll 70s linear infinite; }
+.scanfeed pre {
+  margin: 0; padding: 1.2rem 0;
+  font-family: var(--mono); font-size: .7rem; line-height: 2;
+  color: rgba(118, 200, 176, .14);
+  filter: blur(1.2px);
+}
+.sf-hi { color: rgba(243, 191, 79, .17); }
+.sf-ok { color: rgba(76, 224, 179, .19); }
+@keyframes scanfeed-scroll { to { transform: translateY(-50%); } }
+
 .ghost {
   position: absolute; max-width: 0; overflow: hidden; white-space: nowrap;
   font-family: var(--mono); font-size: .78rem; letter-spacing: .05em;
@@ -69,11 +86,11 @@ body::before {
   100% { max-width: 38ch; opacity: 0; }
 }
 .g1 { top: 16%; left: 5%; }
-.g2 { top: 30%; left: 62%; animation-delay: 3.5s; }
+.g2 { top: 30%; left: 44%; animation-delay: 3.5s; }
 .g3 { top: 48%; left: 10%; animation-delay: 7s; }
-.g4 { top: 62%; left: 55%; animation-delay: 10.5s; }
+.g4 { top: 64%; left: 40%; animation-delay: 10.5s; }
 .g5 { top: 78%; left: 18%; animation-delay: 14s; }
-.g6 { top: 88%; left: 66%; animation-delay: 17.5s; }
+.g6 { top: 90%; left: 47%; animation-delay: 17.5s; }
 
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
@@ -381,7 +398,7 @@ footer p { margin: 0; }
   .statusbar { padding: .45rem 1rem; }
   .statusbar p.statusbar-right { display: none; }
   .site-header { flex-wrap: wrap; gap: .5rem .9rem; padding: .8rem 1rem; }
-  .g2, .g4, .g6 { display: none; }
+  .g2, .g4, .g6, .scanfeed { display: none; }
   nav { gap: .75rem; font-size: .72rem; flex-wrap: wrap; }
   .hero { min-height: auto; padding: 4.2rem 0 3.6rem; }
   .hero-grid, .split-heading, .note-section, .connect-grid { grid-template-columns: 1fr; gap: 2.2rem; }

@@ -35,6 +35,66 @@
 
     <div class="bg-fx" aria-hidden="true">
       <span class="scanline"></span>
+      <div class="scanfeed">
+        <div class="scanfeed-track">
+          <pre>$ nmap -sV -O 10.13.37.0/24
+Starting Nmap 7.95 ( https://nmap.org )
+Nmap scan report for gateway.lab (10.13.37.1)
+Host is up (0.0021s latency).
+PORT      STATE    SERVICE   VERSION
+22/tcp    open     ssh       OpenSSH 9.6
+443/tcp   open     https     nginx 1.25.4
+8443/tcp  closed   https-alt
+502/tcp   filtered modbus
+20000/tcp filtered dnp3
+Nmap done: 256 IPs (14 hosts up)
+
+$ vulnscan --profile ot-safe 10.13.37.0/24
+[+] loading 187,412 signatures
+[+] passive mode enabled for OT segment
+<span class="sf-hi">[!] CVE-2024-6387  openssh   10.13.37.8   HIGH</span>
+<span class="sf-hi">[!] CVE-2023-44487 http/2    10.13.37.12  MED</span>
+<span class="sf-ok">[✓] patch verified 10.13.37.8 openssh 9.8p1</span>
+<span class="sf-ok">[✓] mitigation applied 10.13.37.12</span>
+[i] modbus/dnp3 excluded (passive only)
+[+] scan complete: 2 findings, 2 remediated
+[+] report written to /reports/2026-07.json
+
+$ tail -f /var/log/vulnmgmt.log
+prioritized: 14 findings -> 2 actionable
+sla status: within target
+watching for new advisories...
+</pre>
+          <pre>$ nmap -sV -O 10.13.37.0/24
+Starting Nmap 7.95 ( https://nmap.org )
+Nmap scan report for gateway.lab (10.13.37.1)
+Host is up (0.0021s latency).
+PORT      STATE    SERVICE   VERSION
+22/tcp    open     ssh       OpenSSH 9.6
+443/tcp   open     https     nginx 1.25.4
+8443/tcp  closed   https-alt
+502/tcp   filtered modbus
+20000/tcp filtered dnp3
+Nmap done: 256 IPs (14 hosts up)
+
+$ vulnscan --profile ot-safe 10.13.37.0/24
+[+] loading 187,412 signatures
+[+] passive mode enabled for OT segment
+<span class="sf-hi">[!] CVE-2024-6387  openssh   10.13.37.8   HIGH</span>
+<span class="sf-hi">[!] CVE-2023-44487 http/2    10.13.37.12  MED</span>
+<span class="sf-ok">[✓] patch verified 10.13.37.8 openssh 9.8p1</span>
+<span class="sf-ok">[✓] mitigation applied 10.13.37.12</span>
+[i] modbus/dnp3 excluded (passive only)
+[+] scan complete: 2 findings, 2 remediated
+[+] report written to /reports/2026-07.json
+
+$ tail -f /var/log/vulnmgmt.log
+prioritized: 14 findings -> 2 actionable
+sla status: within target
+watching for new advisories...
+</pre>
+        </div>
+      </div>
       <span class="ghost g1">$ tail -f /var/log/auth.log</span>
       <span class="ghost g2">$ dig +trace sageschiller.com</span>
       <span class="ghost g3">$ sha256sum firmware.bin</span>
