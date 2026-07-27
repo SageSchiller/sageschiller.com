@@ -307,7 +307,7 @@ watching for new advisories...
     <footer>
       <p>© <span id="year">2026</span> Sage Schiller</p>
       <p class="footer-mono">no trackers · no analytics · no noise</p>
-      <p class="footer-mono">HNL · UTC−10 · v2026.07.16.6</p>
+      <p class="footer-mono">HNL · UTC−10 · v2026.07.16.7</p>
     </footer>
 
     <script>
@@ -359,6 +359,15 @@ watching for new advisories...
           }
         }
         setTimeout(nextLine, 600);
+      })();
+
+      // Mirror the scan feed onto the left edge, phase-shifted.
+      (function () {
+        var feed = document.querySelector('.scanfeed');
+        if (!feed) return;
+        var left = feed.cloneNode(true);
+        left.classList.add('scanfeed-left');
+        feed.parentNode.appendChild(left);
       })();
 
       // Reveal sections as they enter the viewport.
