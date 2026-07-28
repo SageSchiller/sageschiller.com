@@ -327,6 +327,8 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 .connect-frame h2 { max-width: 780px; margin-bottom: 1.2rem; font-size: clamp(1.7rem, 2.8vw, 2.5rem); }
 .connect-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: start; }
 .connect-copy { color: var(--muted); margin: 0 0 1.6rem; max-width: 30rem; }
+.pgp-fingerprint { font-family: var(--mono); font-size: .7rem; letter-spacing: .03em; color: var(--muted); margin: -1rem 0 1.6rem; }
+.pgp-fingerprint .fp { color: var(--ink); user-select: all; }
 .connect-links { display: flex; gap: .75rem; flex-wrap: wrap; }
 .contact-form { display: grid; gap: 1rem; }
 .contact-form label { display: grid; gap: .4rem; }
