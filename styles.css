@@ -302,6 +302,13 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 .experience-label { font-family: var(--mono); color: var(--faint); font-size: .67rem; letter-spacing: .16em; font-weight: 700; }
 .experience-row p:last-child { margin: 0; font-size: 1.06rem; }
 
+/* ---------- about ---------- */
+.about-section { border-top: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(17rem, .8fr); gap: 3rem; align-items: start; }
+.about-copy { color: var(--muted); font-size: 1.02rem; max-width: 34rem; }
+.about-copy p { margin: 0 0 1.1rem; }
+.about-copy p:last-child { margin-bottom: 0; }
+
 /* ---------- principle ---------- */
 .note-section { display: grid; grid-template-columns: 9rem 1fr; gap: 2.5rem; align-items: start; border-top: 1px solid var(--line); }
 .note-mark { color: var(--accent); font-family: var(--mono); font-size: 4.6rem; line-height: 1; font-weight: 700; text-shadow: 0 0 26px rgba(76, 224, 179, .3); }
@@ -430,7 +437,7 @@ footer p { margin: 0; }
   .g2, .g4, .g6 { display: none; }
   nav { gap: .75rem; font-size: .72rem; flex-wrap: wrap; }
   .hero { min-height: auto; padding: 4.2rem 0 3.6rem; }
-  .hero-grid, .split-heading, .note-section, .connect-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .hero-grid, .split-heading, .note-section, .connect-grid, .about-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .hero-side { max-width: 30rem; }
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card { min-height: 0; }
