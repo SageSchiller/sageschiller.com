@@ -355,6 +355,10 @@ h2 { margin-bottom: 0; max-width: 840px; font-size: clamp(1.9rem, 3.6vw, 3.2rem)
 .contact-form .button { justify-self: start; cursor: pointer; }
 .hp-field { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
+/* Turnstile widget: only occupies space once it renders. */
+.cf-turnstile { min-height: 0; }
+.cf-turnstile:not(:empty) { margin-block: 0.25rem; }
+
 /* ---------- standalone pages (404, sent) ---------- */
 .standalone {
   min-height: 100svh; width: min(calc(100% - 3rem), 36rem);

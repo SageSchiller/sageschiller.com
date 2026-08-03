@@ -11,5 +11,14 @@
     // Browser form posts are navigation requests; without this the asset
     // layer answers them with 405 before the Worker ever runs.
     "run_worker_first": ["/api/*"]
-  }
+  },
+  // Per-IP throttle for /api/contact. The Worker skips this gracefully if the
+  // binding is absent, so removing it will not break the contact form.
+  "ratelimits": [
+    {
+      "name": "RATE_LIMIT",
+      "namespace_id": "1001",
+      "simple": { "limit": 5, "period": 60 }
+    }
+  ]
 }
