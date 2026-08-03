@@ -29,6 +29,7 @@
       "knowsAbout": ["IT/OT security", "Vulnerability management", "Incident response", "Threat hunting", "OSINT", "Risk and compliance"]
     }
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -331,8 +332,22 @@ watching for new advisories...
                 <textarea name="message" rows="5" minlength="10" maxlength="2000" required></textarea>
               </label>
               <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <!-- Turnstile injects a hidden cf-turnstile-response input into this form. -->
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAEE0_vcSreKWWC3h" data-action="turnstile-spin-v2" data-theme="dark" data-size="flexible"></div>
               <button class="button button-primary" type="submit">Send message <span aria-hidden="true">→</span></button>
             </form>
+            <script>
+              // Turnstile tokens are single-use. If the submit does not navigate
+              // away (inline error, browser back to a cached page), reset the
+              // widget so a retry gets a fresh token instead of being rejected
+              // as timeout-or-duplicate.
+              document.querySelector('.contact-form')?.addEventListener('submit', () => {
+                setTimeout(() => window.turnstile?.reset(), 0);
+              });
+              window.addEventListener('pageshow', (e) => {
+                if (e.persisted) window.turnstile?.reset();
+              });
+            </script>
           </div>
         </div>
       </section>
